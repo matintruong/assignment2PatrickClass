@@ -1,0 +1,21 @@
+{
+  "name": "inm320-bootstrap",
+  "version": "1.0.0",
+  "description": "INM320 Bootstrap Assignment",
+  "scripts": {
+    "dev": "lite-server --baseDir=\"public\"",
+    "build": "node-sass src/scss -o public/assets/css --output-style compressed",
+    "watch": "npm run build && node-sass src/scss -wo public/assets/css --output-style compressed",
+    "start": "concurrently \"npm run watch\" \"npm run dev\""
+  },
+  "author": "Patrick Schroen",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "hamburgers": "^1.1.3"
+  }
+}
